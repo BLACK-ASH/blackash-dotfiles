@@ -20,7 +20,8 @@ exec --no-startup-id picom
 exec --no-startup-id feh --bg-scale ~/.config/backgrounds/car-with-full-moon-background.jpg
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
-exec_always --no-startup-id xrandr --output Virtual-1 --mode 1920x1080
+exec_always --no-startup-id xrandr --output Virtual-1 --auto
+
 # kill any hanging polybar processes
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
@@ -75,9 +76,9 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+space exec --no-startup-id rofi -show combi
-bindsym $mod+Tab exec --no-startup-id rofi -show window
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-5.rasi
+bindsym $mod+space exec --no-startup-id rofi -show commbi -theme ~/.config/rofi/launchers/type-1/style-5.rasi
+bindsym $mod+Tab exec --no-startup-id rofi -show window -theme ~/.config/rofi/launchers/type-1/style-5.rasi
 
 # change focus
 bindsym $mod+h focus left
